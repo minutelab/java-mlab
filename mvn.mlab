@@ -1,0 +1,20 @@
+#!/usr/bin/env mlab
+
+FROM maven
+
+IMPORT HOME
+
+MOUNT /root/.m2 $HOME/.m2
+
+MOUNT /src .
+
+WORKDIR /src
+
+START << END
+    if [ "$1" = bash ]
+    then
+      exec bash
+    fi
+
+    mvn "$@"
+END
