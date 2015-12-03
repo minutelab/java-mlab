@@ -12,7 +12,7 @@ START << END
        echo failng on purpose >&2
        exit 10
     fi
-    sleep 3
+    sleep 1
     date
     mlab detach
     sleep 60
