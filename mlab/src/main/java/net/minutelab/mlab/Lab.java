@@ -11,16 +11,26 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 
 /**
- * Lab
+ * Start a minuteLab lab
  *
- * Start a minuteLab lab: Start the lab and wait for it to be ready.
+ * Lav wraps a minuteLab lab, handling starting the lab,
+ * waiting for it to be ready, and at the end cleaning it.
  *
+ * Normal cleaning will happen with the close method,
+ * but even if it is not cleaned, the lab will be cleaned once the calling process is dead.
  */
 public class Lab implements Closeable
 {
     private List<String> args;
     private Process p;
 
+    /**
+     * Create a lab object.
+     *
+     * The lab is not initialized until the {@link #start} method is called.
+     *
+     * @param  args mlab script and its argument.
+     */
     public Lab(String... args) {
         this.args = new ArrayList<String>();
         this.args.add("mlab");
@@ -30,6 +40,13 @@ public class Lab implements Closeable
         this.args.addAll(Arrays.asList(args));
     }
 
+    /**
+     * Start a lab and wait for it to be ready
+     *
+     * The method blocks until the lab is detached or exists.
+     *
+     * If the lab could not be started or exists withotu detaching, it throws an IOException
+     */
     public void start() throws IOException {
         ProcessBuilder pb = new ProcessBuilder(args);
         Process p = pb.start();
@@ -50,6 +67,9 @@ public class Lab implements Closeable
         this.p = p;
     }
 
+    /**
+     * Clean up the lab (if it is still running)
+     */
     public void close() throws IOException {
         if ( p==null ) {
             return;
@@ -58,6 +78,10 @@ public class Lab implements Closeable
         waitFor(p,50);
     }
 
+    /** check if the lab is still running
+     *
+     * @return true if the Lab is still running
+     */
     public boolean isAlive() {
         return p!=null && p.isAlive();
     }
