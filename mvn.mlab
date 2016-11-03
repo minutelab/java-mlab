@@ -2,11 +2,11 @@
 
 FROM maven
 
-IMPORT HOME
+FLAG cache=mavencache "name of volume with maven cache"
 
-MOUNT /root/.m2 $HOME/.m2
+SHARE /root/.m2 VOLUME:$mavencache
 
-MOUNT /src .
+SHARE /src .
 
 WORKDIR /src
 
