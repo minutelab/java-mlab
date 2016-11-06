@@ -1,4 +1,4 @@
-package net.minutelab.mlab;
+package io.minutelab.mlab;
 
 import java.io.BufferedReader;
 import java.io.Closeable;

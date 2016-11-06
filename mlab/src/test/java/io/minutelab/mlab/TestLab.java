@@ -1,6 +1,7 @@
+package io.minutelab.mlab;
 
 import java.io.IOException;
-import net.minutelab.mlab.Lab;
+import io.minutelab.mlab.Lab;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class TestLab {
     @Test
     public void testLab() throws IOException {
         System.out.println("Start testLab test");
-        String script=this.getClass().getResource("tst.mlab").getPath();
+        String script=Resource.filename(this,"/tst.mlab");
         Lab lab = new Lab(script);
 
         try {
@@ -27,7 +28,7 @@ public class TestLab {
     public void testFailedLab() throws IOException {
         System.out.println("Start failedLab test");
 
-        Lab lab = new Lab(this.getClass().getResource("tst.mlab").getPath(),"-fail");
+        Lab lab = new Lab(Resource.filename(this,"/tst.mlab"),"-fail");
 
         try {
             assertFalse("Lab was not started",lab.isAlive());

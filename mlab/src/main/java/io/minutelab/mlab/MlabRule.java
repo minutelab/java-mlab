@@ -1,4 +1,4 @@
-package net.minutelab.mlab;
+package io.minutelab.mlab;
 
 import java.io.IOException;
 import org.junit.rules.ExternalResource;

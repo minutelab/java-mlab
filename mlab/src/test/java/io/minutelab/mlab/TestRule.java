@@ -1,18 +1,19 @@
+package io.minutelab.mlab;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.sql.ResultSet;
-import net.minutelab.mlab.MlabRule;
+import io.minutelab.mlab.MlabRule;
 import static org.junit.Assert.*;
 import org.junit.Rule;
 import org.junit.Test;
 
 public class TestRule {
     @Rule
-    public MlabRule mlab = new MlabRule(this.getClass().getResource("postgres.mlab").getPath(),
+    public MlabRule mlab = new MlabRule(Resource.filename(this,"/postgres.mlab"),
                                         "-schema",
-                                        this.getClass().getResource("test.sql").getPath());
+                                        Resource.filename(this,"/test.sql"));
 
     @Test
     public void testDB() throws Exception {
