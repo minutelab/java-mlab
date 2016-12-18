@@ -1,0 +1,14 @@
+mlab/target/site/apidocs/package-list
+mlab/target/site/apidocs/overview-tree.html
+*.html
+mlab/target/surefire/surefire5016139232083339548tmp
+mlab/target/surefire/
+*.class
+mlab/target/test-classes/
+mlab/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml
+mlab/target/surefire-reports/
+mlab/target/maven-archiver/pom.properties
+mlab/target/classes/
+mlab/target/javadoc-bundle-options/package-list
+mlab/target/site/apidocs/script.js
+mlab/target/site/apidocs/stylesheet.css
