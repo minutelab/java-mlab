@@ -11,7 +11,7 @@ public class MlabRule extends ExternalResource {
     private Lab lab;
 
     /**
-     * @param args mintue lab script and args
+     * @param args minute lab script and args
      * @see Lab#Lab
      */
     public MlabRule(String... args) {
@@ -21,6 +21,7 @@ public class MlabRule extends ExternalResource {
     @Override
     protected void before() throws IOException {
         lab.start();
+        System.out.println("network specs: "+lab.getIP()+"  "+getPort());
     }
 
     @Override
@@ -30,5 +31,12 @@ public class MlabRule extends ExternalResource {
         } catch (IOException e) {
             System.out.println("Error closing lab: "+e);
         }
+    }
+    public Integer getPort(int internal){
+       return lab.getPort(internal);
+    }
+    
+    public Integer getPort(){
+        return lab.getPort();
     }
 }

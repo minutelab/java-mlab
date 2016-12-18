@@ -1,6 +1,6 @@
 #!/usr/bin/env mlab
 
-FLAG ver=latest Posgres version
+FLAG ver=latest Postgres version
 FLAG port=5432  Exposed port
 FLAG ip=default IP to be used for server
 FLAG schema=$0 "SQL schema file to load" # hack to name a file that exists and would be ignored...
