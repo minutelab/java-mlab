@@ -26,7 +26,7 @@
         <connection>scm:git:git://github.com/minutelab/java-mlab.git</connection>
         <developerConnection>scm:git:ssh://github.com:minutelab/java-mlab.git</developerConnection>
         <url>http://github.com/minutelab/java-mlab</url>
-    </scm> -->
+    </scm>
     <dependencies>
         <dependency>
             <groupId>commons-io</groupId>
