@@ -65,7 +65,8 @@ public class Lab implements Closeable
      *
      * The lab is not initialized until the {@link #start} method is called.
      *
-     * @param resource accepts an mlab script retrieved with myObj.getClass().getResource("/file.mlab") @param args other arguments.
+     * @param resource accepts an mlab script retrieved with myObj.getClass().getResource("/file.mlab") 
+	 * @param args other arguments.
      */
     public Lab(URL resource,String...args){
          String script = null;
@@ -121,7 +122,10 @@ public class Lab implements Closeable
      * The method blocks until the lab is detached or exits.
      *
      * If the lab could not be started or exits without detaching, it throws an IOException
+	 * @throws IOException on stream failure.
+	 * @throws InterruptedException when waiting for the lab proccess failes.   
      */
+	
     public void start() throws IOException,InterruptedException {
         log("starting lab");
         pb = new ProcessBuilder(args);
