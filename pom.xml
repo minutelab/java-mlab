@@ -21,11 +21,11 @@
             <organizationUrl>http://minutelab.io</organizationUrl>
         </developer>
     </developers>
-    <scm>
-        <connection>scm:git:git://github.com/minutelab/java-mlab.git</connection>
-        <developerConnection>scm:git:ssh://github.com:minutelab/java-mlab.git</developerConnection>
-        <url>scm:https://github.com/minutelab/java-mlab.git</url>
-    </scm>
+		<scm>
+			<url>scm:https://github.com/minutelab/java-mlab.git</url>
+			<connection>scm:git:git://github.com/minutelab/java-mlab.git</connection>
+			<developerConnection>scm:git:ssh://github.com:minutelab/java-mlab.git</developerConnection>
+		</scm>
     <dependencies>
         <dependency>
             <groupId>commons-io</groupId>
