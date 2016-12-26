@@ -27,6 +27,9 @@ public class MlabRule extends ExternalResource {
     public MlabRule(URL resource,String... args){
       lab = new Lab(resource, args);
     }
+    public MlabRule(Lab lab){
+        this.lab = lab;
+    }
     @Override
     protected void before() throws IOException,InterruptedException {
         lab.start();
