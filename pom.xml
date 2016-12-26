@@ -22,7 +22,7 @@
         </developer>
     </developers>
 		<scm>
-			<url>scm:https://github.com/minutelab/java-mlab.git</url>
+			<url>scm:git:https://github.com/minutelab/java-mlab.git</url>
 			<connection>scm:git:git://github.com/minutelab/java-mlab.git</connection>
 			<developerConnection>scm:git:ssh://github.com:minutelab/java-mlab.git</developerConnection>
 		</scm>
