@@ -1,5 +1,6 @@
 # Integrate MinuteLab labs into java "Unit" tests
 
+[![Build Status](https://travis-ci.org/minutelab/java-mlab.svg?branch=develop)](https://travis-ci.org/minutelab/java-mlab)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Support for integrating [MinuteLab](http://minutelab.io) labs inside Java "unit" testing.

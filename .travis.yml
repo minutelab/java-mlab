@@ -1,0 +1,10 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+before_script:
+  - scripts/mlab_init.sh -d $PWD/bin $MLAB_KID $MLAB_SECRET
+  - export PATH=$PATH:$PWD/bin
+
+install: true
