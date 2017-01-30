@@ -1,23 +1,9 @@
 package io.minutelab.mlab;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.lang.Object;
-import java.lang.IllegalArgumentException;
-import java.net.URI;
 import java.net.URL;
-import java.net.URISyntaxException;
-import java.nio.file.CopyOption;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.text.DefaultEditorKit;
 
 /** Utility class to ease converting a file name out of a resource name
  *

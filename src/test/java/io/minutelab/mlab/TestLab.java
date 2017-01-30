@@ -1,11 +1,10 @@
 package io.minutelab.mlab;
 
-import java.io.IOException;
-import io.minutelab.mlab.Lab;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import java.io.IOException;
+
+import static org.junit.Assert.*;
 
 
 public class TestLab {

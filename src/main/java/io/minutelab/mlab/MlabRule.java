@@ -1,8 +1,9 @@
 package io.minutelab.mlab;
 
+import org.junit.rules.ExternalResource;
+
 import java.io.IOException;
 import java.net.URL;
-import org.junit.rules.ExternalResource;
 
 /** A JUnit rule that run a minuteLab lab for the duration of a test or a test suite.
  *
