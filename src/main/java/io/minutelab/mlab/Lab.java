@@ -129,8 +129,9 @@ public class Lab implements Closeable
     public void start() throws IOException,InterruptedException {
         log("starting lab");
         pb = new ProcessBuilder(args);
-        pb.redirectErrorStream(true);
         Process p = pb.start();
+
+        logStream("!>: ",p.getErrorStream());
        
         BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String line;
@@ -358,7 +359,24 @@ public class Lab implements Closeable
             System.out.print(args[i]+" ");
         System.out.println();
     }
-    
+
+    private void logStream(final String prefix, InputStream s) {
+        final BufferedReader in = new BufferedReader(new InputStreamReader(s));
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String line;
+                try {
+                    while ((line = in.readLine()) != null)
+                        System.out.println(prefix + line);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
     class NetConfig{
         Hashtable <String,String> interfaces = new Hashtable<String, String>();
         Hashtable<Integer,Integer> exposedPorts = new Hashtable<Integer, Integer>();

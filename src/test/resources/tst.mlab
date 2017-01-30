@@ -7,6 +7,7 @@ FLAG -bool fail Fail running
 START << END
     set -e
     date
+    echo "test message to stderr" >&2
     if [ "$fail" = "true" ]
     then
        echo failng on purpose >&2
