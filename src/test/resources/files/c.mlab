@@ -1,0 +1,11 @@
+#!/usr/bin/env mlab
+
+FROM ubuntu
+ADD -exclude=*.mlab $spath/ /docs
+WORKDIR /docs
+
+START << END
+   ls -l
+   mlab detach
+   sleep 60
+END
