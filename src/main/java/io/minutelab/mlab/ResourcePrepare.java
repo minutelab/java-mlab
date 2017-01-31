@@ -24,13 +24,10 @@ public class ResourcePrepare
     }
     
     private static String doFileName(Object obj, String resource)throws Exception{
-        String seperator = resource.lastIndexOf("/")>resource.lastIndexOf("\\")?"/":"\\";
-        String shortName = resource.substring(resource.lastIndexOf(seperator)+1);
-        File tmp = File.createTempFile("xxx", null);
-        String dir = tmp.getAbsolutePath().substring(0,tmp.getAbsolutePath().lastIndexOf("xxx"));
-        File f = new File(dir+shortName);
+        String tempDir = Files.createTempDirectory("temDir").toString();
+        File f = new File(tempDir+resource);
         f.createNewFile();
-        
+
         URL url = obj.getClass().getResource(resource);
         if (url == null){
             System.out.println("url is null" + resource);

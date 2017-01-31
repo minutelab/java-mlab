@@ -194,8 +194,6 @@ public class Lab implements Closeable {
 
         String tempDir = Files.createTempDirectory("test").toString();
 
-
-
         if (isDir(resource)) {
             mlabScript = prepareFiles(tempDir, urlPath, System.getProperty("file.separator"));
         } else if (resBaseName.endsWith(".mlab")) {
