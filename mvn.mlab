@@ -4,7 +4,7 @@ FROM maven
 
 FLAG cache=mavencache "name of volume with maven cache"
 
-SHARE /root/.m2 VOLUME:$mavencache
+SHARE /root/.m2 VOLUME:$cache
 
 SHARE /src .
 
