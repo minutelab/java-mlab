@@ -3,7 +3,7 @@
     <groupId>io.minutelab</groupId>
     <artifactId>mlab</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.8-RC2-SNAPSHOT</version>
+    <version>0.1.9-RC1-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>MinuteLab addon for java unit testing (JUnit)</description>
     <url>http://minutelab.io</url>
