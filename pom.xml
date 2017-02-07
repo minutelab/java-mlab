@@ -3,7 +3,7 @@
     <groupId>io.minutelab</groupId>
     <artifactId>mlab</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.9-RC1-SNAPSHOT</version>
+    <version>0.1.9-RC1</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>MinuteLab addon for java unit testing (JUnit)</description>
     <url>http://minutelab.io</url>
@@ -25,7 +25,7 @@
 			<url>scm:git:git@github.com:minutelab/java-mlab.git</url>
 			<connection>scm:git:git@github.com:minutelab/java-mlab.git</connection>
 			<developerConnection>scm:git:git@github.com:minutelab/java-mlab.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>mlab-0.1.9-RC1</tag>
   </scm>
   
     <dependencies>
